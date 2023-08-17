@@ -56,7 +56,6 @@ async function placeBids() {
 	const winnerInfo = await auctionContract.methods.getWinner().call();
 	const winnerAddress = winnerInfo[0];
 	const winningBid = winnerInfo[1];
-
 	console.log(`Winner: ${winnerAddress}`);
 	console.log(`Winning Bid: ${winningBid} wei`);
 	const develop4_blance = await web3.eth.getBalance(deployer4);
